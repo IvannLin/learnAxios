@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rest</title>
+</head>
+<body>
+<script>
+    //es5获取实参的方式   对象
+    function date() {
+        console.log(arguments);
+    }
+    date('白芷','阿娇','思慧');
+
+
+    //rest函数  数组
+    function lose(...args) {
+        console.log(args); //可以使用filter some every map
+    }
+    lose('白芷','思慧','阿娇');
+
+    //rest参数必须放到参数最后
+    function fn(a,b,...args) {
+        console.log(a);
+        console.log(b);
+        console.log(args);
+    }
+    fn(1,2,3,4,5)
+</script>
+</body>
+</html>

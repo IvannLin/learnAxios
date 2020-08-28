@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数实践</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="ad">
+
+    </div>
+    <script>
+        //需求一.点击div 2s后变色
+        let ad = document.getElementById('ad');
+        ad.addEventListener('click',function () {
+            // let _this=this;
+            setTimeout( ()=> {
+                this.style.background = 'pink'
+            },500)
+        })
+
+
+        //需求二
+        const arr = [4,6,7,11,15,20];
+        // const result =arr.filter(function (item) {
+        //     if (item%2==0){
+        //         return true;
+        //     }else{
+        //         return false;
+        //     }
+        // })
+
+        const result = arr.filter(item=>item % 2 ===0)
+        console.log(result);
+    </script>
+</body>
+</html>

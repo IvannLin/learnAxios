@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象继承</title>
+</head>
+<body>
+<script>
+    //手机
+    function phone(brand,price){
+        this.brand = brand;
+        this.price = price;
+    }
+
+    phone.prototype.call = function () {
+        console.log("我可以打电话");
+    }
+
+    //智能手机
+    function smartPhone(brand,price,color,size) {
+        phone.call(this,brand,price);
+        this.color = color;
+        this.size = size;
+    }
+
+    //设置子级构造函数的原型
+    smartPhone.prototype = new phone;
+    smartPhone.prototype.constructor = smartPhone;
+
+    //声明子类的方法
+    smartPhone.prototype.photo = function () {
+        console.log("我可以拍照");
+    }
+    smartPhone.prototype.playGame = function () {
+        console.log("我可以玩游戏");
+    }
+
+    const chuizi = new smartPhone('锤子',2499,'黑色','5.5inch')
+    console.log(chuizi);
+</script>
+</body>
+</html>

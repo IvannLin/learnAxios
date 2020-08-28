@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <img src="img/p1.JPG" id="lbt" height="400" width="880"/>
+<script>
+    let num = 0;
+    function run() {
+        num++;
+        if (num>2){
+            num=0;
+        }
+        let lbt = document.getElementById("lbt");
+        lbt.src = "img/p"+num+".JPG"
+    }
+    setInterval(run,2000)
+</script>
+
+</body>
+</html>

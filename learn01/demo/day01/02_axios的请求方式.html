@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    //.get无参请求
+    // axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+    //     .then(response =>{
+    //         console.log(response);
+    //     }).catch(err=>{
+    //     console.log(err);
+    // })
+
+    //.get有参请求
+    // axios.get('/ById',{params: {id: 1}})
+    //     .then(response =>{
+    //         console.log(response);
+    //     }).catch(err=>{
+    //     console.log(err);
+    // })
+
+    //.post无参
+    // axios.post('http://')
+    //     .then(response =>{
+    //         console.log(response);
+    //     }).catch(err=>{
+    //     console.log(err);
+    // })
+
+    //.post有参
+    axios.post('/ByName',{params:{name:'张三'}})
+        .then(response =>{
+            console.log(response);
+        }).catch(err=>{
+        console.log(err);
+    })
+
+</script>
+
+</body>
+</html>

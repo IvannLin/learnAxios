@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>symbol</title>
+</head>
+<body>
+<script>
+    //创建symbol
+    let s = Symbol();
+    console.log(s,typeof s);
+    let s2 = Symbol('zhangsan');
+    let s3 = Symbol('zhangsan');
+    //symbol.for创建
+    let s4 = Symbol.for('zhangsan');
+    let s5 = Symbol.for('zhangsan');
+    // console.log(s2 === s3);
+    console.log(s4,typeof s4);
+    console.log(s4 === s5);
+
+</script>
+</body>
+</html>

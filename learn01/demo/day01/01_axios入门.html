@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    //使用默认方式发送无参请求 get无参请求 post无参请求
+    // axios({
+    //     url:'https://api.coindesk.com/v1/bpi/currentprice.json',
+    //     method:'get'
+    // }).then(res => {
+    //             console.log(res);
+    // })
+
+
+    //get方式的有参请求 ,比如通过id来创建请求
+    // axios({
+    //     url:'/user?ID=12345'
+    // }).then(res=>{
+    //     console.log(res);
+    // })
+
+
+    //post有参方式
+    axios({
+        url:'/name',
+        method:'post',
+        params:{
+            name:'张三'
+        }
+    }).then(res=>{
+        console.log(res);
+    })
+</script>
+</body>
+</html>

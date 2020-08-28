@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    axios.interceptors.response.use(config=> {
+        console.log('进入响应拦截器');
+        return config.data;
+    },err=>{
+        console.log('响应方向失败');
+        console.log(err);
+    })
+
+    axios.get('http://localhost:9999/student/student/getAllStudent')
+    .then(res=>{
+        console.log(res);
+    })
+
+</script>
+</body>
+</html>

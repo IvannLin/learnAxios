@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    axios.defaults.baseURL = 'https://localhost:9999/student/student';
+    axios.defaults.timeout = 5000;
+    axios.get('getAllStudent').then(res=>{
+        console.log(res);
+    });
+    axios.post('pGet').then(res=>{
+        console.log(res);
+    }).catch(err=>{
+        console.log(err);
+    })
+</script>
+
+</body>
+</html>

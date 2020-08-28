@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+<script>
+    // let fn = function () {
+    //
+    // }
+
+    // let fn =(a,b)=>{
+    //     return a+b;
+    // }
+    // let result = fn(1,2);
+    // console.log(result);
+
+    //1.this是静态的
+    function getName(){
+        console.log(this.name);
+    }
+    let getName2=()=>{
+        console.log(this.name);
+    }
+    //设置window对象的name属性
+    window.name='尚硅谷';
+    const SCHOOL ={
+        name:'ATGUIGU'
+    }
+
+    //直接调用
+    // getName();
+    // getName2();
+
+    //call方法调用
+    getName.call(SCHOOL);
+    getName2.call(SCHOOL);
+
+    //2.不能作为构造实例化对象
+    // let person = (name,age)=>{
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // let me = new person('xiaolin','20');
+    // console.log(me);
+
+//    3.
+//     let fn=()=>{
+//         console.log(arguments);
+//     }
+//     fn(1,2,3)
+    // 4.简写
+    //省略小括号
+    // let add = n =>{
+    //     return n+n;
+    // }
+    // console.log(add(9));
+    //省略花括号
+    let pow = n => n*n;
+    console.log(pow(9));
+
+
+</script>
+</body>
+</html>

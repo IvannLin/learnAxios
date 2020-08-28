@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class的静态成员</title>
+</head>
+<body>
+<script>
+    // function phone() {
+    //
+    // }
+    // phone.name = '手机';
+    // phone.change = function () {
+    //     console.log("我可以改变世界");
+    // }
+    // phone.prototype.size = '5.5inch'
+    //
+    // let nokia = new phone();
+    // console.log(nokia.name);
+    // console.log(nokia.size);
+
+    class phone{
+        //静态属性
+        static name = '手机';
+        static change = function () {
+            console.log("我可以改变世界");
+        }
+    }
+    let nokia = new phone();
+    console.log(nokia.name);  //undefined
+    console.log(phone.name);
+</script>
+</body>
+</html>

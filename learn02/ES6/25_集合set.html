@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = new Set();
+    let s2 = new Set(['大事儿','小事儿','好事儿','大事儿']); //自动去重
+
+    //元素个数
+    // console.log(s2.size);
+    // //添加新的元素
+    // s2.add('喜事儿');
+    // //删除元素
+    // s2.delete('小事儿')
+    // //检测
+    // console.log(s2.has('好事儿'));
+    // //清空
+    // s2.clear()
+    // console.log(s2,typeof s2);
+
+    //for of遍历
+    for (let v of s2){
+        console.log(v);
+    }
+</script>
+</body>
+</html>

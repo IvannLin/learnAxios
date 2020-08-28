@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简化对象写法</title>
+</head>
+<body>
+<script>
+    let name = '尚硅谷';
+    let change = function () {
+        console.log("我们可以改变你");
+    }
+    const school={
+        name, //属性名和变量值是一样的,可以省略
+        change,
+        improve(){
+            console.log("我们可以省去:function");
+        }
+    }
+    console.log(school);
+</script>
+</body>
+</html>
