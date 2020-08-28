@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone{
+        static str = "hello"
+        //构造方法
+        constructor(brand,price) {
+            this.brand = brand;
+            this.price = price;
+        }
+        //父类的成员属性
+        static call(){
+            console.log("我可以打电话");
+            return 234
+        }
+    }
+    Phone.call()
+    let s1 = Phone.str;
+    console.log(s1)
+    Math.random()
+    console.log(Math.PI)
+
+    class smartphone extends Phone {
+        //构造方法
+        constructor(brand,price,color,size) {
+            super(brand,price); //phone.call(this,brand,price)
+            this.color = color;
+            this.size = size;
+        }
+
+        photo(){
+            console.log("我可以拍照");
+        }
+        playGame(){
+            console.log("玩游戏");
+        }
+
+        //子类对父类方法的重写
+        call() {
+            console.log("除了打电话还可以视频通话");
+        }
+    }
+
+    // function showPhone(phone) {
+    //     let obj = phone;
+    //     let brand = phone.brand;
+    //     let price = obj.price;
+    //     obj.call()
+    //     console.log(brand+"手机,现在只要"+price+"元!")
+    // }
+    // let xiaomi = new phone("小米",1888);
+    // let huawei = new phone("华为p40Pro",8888);
+    // showPhone(huawei)
+    // showPhone(xiaomi);
+
+   function show(name,age){
+
+       console.log("这个人是"+name+",今年"+age+"岁了!")
+    }
+
+    show("李四",18);
+    show("王五",18);
+/*
+有return
+ let i = Math.random(5)
+
+
+
+    ## hh    //    \\    hh ##   \ \  \|\ /_\ \  \\ \  \     \ \  \\ \  \|\ /_\ \  \\ \  \     \ \  \
+    ## hh   //      \\   hh ##    \ \   __  \\ \  \\ \  \     \ \  \\ \   __  \\ \  \\ \  \     \ \  \
+    ## hh                hh ##     \ \  \|\  \\ \  \\ \  \____ \ \  \\ \  \|\  \\ \  \\ \  \____ \ \  \
+    ## hh      wwww      hh ##      \ \_______\\ \__\\ \_______\\ \__\\ \_______\\ \__\\ \_______\\ \__\
+    ## hh                hh ##       \|_______| \|__| \|_______| \|__| \|_______| \|__| \|_______| \|__|
+    ## MMMMMMMMMMMMMMMMMMMM ##
+    ##MMMMMMMMMMMMMMMMMMMMMM##
+         \/            \/
+ */
+    function list() {
+        console.log("                     //")
+        console.log("         \\\\         //")
+        console.log("          \\\\       //")
+        console.log("    ##DDDDDDDDDDDDDDDDDDDDDD##")
+        console.log("    ## DDDDDDDDDDDDDDDDDDDD ##   ________   ___   ___        ___   ________   ___   ___        ___")
+        console.log("    ## hh                hh ##   |\\   __  \\ |\\  \\ |\\  \\      |\\  \\ |\\   __  \\ |\\  \\ |\\  \\      |\\  \\")
+        console.log("    ## hh    //    \\\\    hh ##   \\ \\  \\|\\ /_\\ \\  \\\\ \\  \\     \\ \\  \\\\ \\  \\|\\ /_\\ \\  \\\\ \\  \\     \\ \\  \\")
+        console.log("    ## hh   //      \\\\   hh ##    \\ \\   __  \\\\ \\  \\\\ \\  \\     \\ \\  \\\\ \\   __  \\\\ \\  \\\\ \\  \\     \\ \\  \\")
+
+    }
+    list()
+    function  showPhone(phone) {
+        let res;
+        let obj = phone;
+        let brand = phone.brand;
+        let price = obj.price;
+        // obj.call()
+        res = brand+"手机,现在只要"+price+"元!"
+        return   res
+    }
+
+    let huawei = new Phone("   华为p40Pro",8888);
+    let s = showPhone(huawei).trim()
+
+    console.log(s+"欢迎选购!!!")
+
+</script>
+</body>
+</html>
