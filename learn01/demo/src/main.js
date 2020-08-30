@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import axios from 'axios'
+Vue.prototype.$http = axios;
 
 Vue.config.productionTip = false
 
@@ -29,7 +31,7 @@ new Vue({
 
 
 //第二种方式
-import {request} from "./network/request";
+// import {request} from "./network/request";
 
 // import {request} from "./network/request";
 // request({
@@ -53,9 +55,9 @@ import {request} from "./network/request";
 //   })
 
 //第四种
-import {request} from "./network/request";
-request({
-  url: 'getAllStudent',
-}).then(res=>{
-  console.log(res);
-})
+// import {request} from "./network/request";
+// request({
+//   url: 'getAllStudent',
+// }).then(res=>{
+//   console.log(res);
+// })
